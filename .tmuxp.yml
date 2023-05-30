@@ -1,0 +1,12 @@
+---
+session_name: RemoteDevTool
+windows:
+  - window_name: Caddy
+    layout: main-horizontal
+    panes:
+      - shell_command:
+          - cmd: "# Caddy"
+      - shell_command:
+          - cmd: "# Ngrok"
+      - shell_command:
+          - cmd: "# Chii"

@@ -60,3 +60,23 @@ ngrok http 4545
 
 1. Open site in private tag can lead to site can connect but cant send request to Chii
 2. Request routing over many middle layer, so site can be slow
+
+## Tmux, Tmuxp
+
+If you use Tmux and [Tmuxp](https://tmuxp.git-pull.com), then can use [.tmuxp.yml](./.tmuxp.yml) to quick serve session.
+
+**Copy Tmuxp config**
+
+```sh
+# To config's folder
+wget https://raw.githubusercontent.com/madnh/remove-devtool/master/.tmuxp.yml -O ~/.tmuxp/remote-devtool.yaml
+
+# to your project
+wget https://raw.githubusercontent.com/madnh/remove-devtool/master/.tmuxp.yml -O ./remote-devtool.yaml
+```
+
+**Load Tmuxp config**
+
+```sh
+tmuxp load ./remote-devtool.yml
+```
