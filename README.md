@@ -17,24 +17,32 @@ Default code use below ports of services, you can use environment to override va
 | Chii port   | `CHII_PORT`        | `8080`        |
 | Target site | `TARGET_SITE_PORT` | `3000`        |
 
-### Step 1: run target site
+### Step 1: config and run target site
 
-Run your site
+**Config**
 
-```bash
+Config your site to include Chii script:
+
+```html
+<script src="/chii/target.js"></script>
+```
+
+**Run your site**
+
+```shell
 npm run dev
 npm run start
 ```
 
 ### Step 2: run Chii
 
-```bash
+```shell
 ./chii.sh
 ```
 
 ### Step 3: run Caddy
 
-```bash
+```shell
 ./start.sh
 ```
 
@@ -50,7 +58,7 @@ Open Chii's dashboard and inspect your site, example: [http://localhost:8080](ht
 
 You can use ngrok to serve your site, just point to Caddy's url, example:
 
-```sh
+```shell
 ngrok http [caddy's port]
 # example
 ngrok http 4545
@@ -67,7 +75,7 @@ If you use Tmux and [Tmuxp](https://tmuxp.git-pull.com), then can use [.tmuxp.ym
 
 **Copy Tmuxp config**
 
-```sh
+```shell
 # To config's folder
 wget https://raw.githubusercontent.com/madnh/remove-devtool/master/.tmuxp.yml -O ~/.tmuxp/remote-devtool.yaml
 
@@ -77,6 +85,6 @@ wget https://raw.githubusercontent.com/madnh/remove-devtool/master/.tmuxp.yml -O
 
 **Load Tmuxp config**
 
-```sh
+```shell
 tmuxp load ./remote-devtool.yml
 ```
